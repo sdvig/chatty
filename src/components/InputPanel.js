@@ -5,7 +5,7 @@ const InputPanel = () => {
   return (
     <div className="inputPanelContainer">
       <div className="inputPanel">
-        <input type="text" placeHolder="Message" />
+        <input type="text" placeholder="Message" />
         <button>Send</button>
       </div>
     </div>

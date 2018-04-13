@@ -3,3 +3,31 @@
   margin: 0 auto;
   padding: 14px 24px;
 }
+
+.message {
+  background: #FFF;
+  border: 1px solid #D4DADE;
+  display: inline-block;
+  border-radius: 5px;
+  margin-bottom: 1em;
+  padding: 1em;
+}
+
+.message p {
+  margin: 0.25em;
+}
+
+.message-author,
+.message-time {
+  color: #B3BCC3;
+  font-size: 0.85em;
+}
+
+.my-message-container {
+  text-align: right;
+}
+
+.my-message-container .message {
+  background: #FCF6C5;
+  text-align: left;
+}
