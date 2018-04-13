@@ -1,4 +1,5 @@
 import React from 'react';
+import format from 'date-fns/format'
 import classnames from 'classnames';
 import './MessagesFeed.css';
 
@@ -18,7 +19,7 @@ const Message = ({message, timestamp, author, isCurrentAuthor}) => {
       <div className="message">
         {!isCurrentAuthor && <p className="message-author">{author}</p>}
         <p>{message}</p>
-        <p className="message-time">{timestamp}</p>
+        <p className="message-time">{format(timestamp, 'DD MMM YYYY HH:mm')}</p>
       </div>
     </div>
   );
