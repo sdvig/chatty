@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import MessagesFeed from './components/MessagesFeed'
-import InputPanel from './components/InputPanel'
+import UsernameInput from './components/UsernameInput'
+import Chat from './components/Chat'
+
 import './Chatty.css';
 
 class Chatty extends Component {
@@ -8,34 +9,22 @@ class Chatty extends Component {
     super();
 
     this.state = {
-      messages: [],
-      user: 'Sofiya'
+      username: null
     };
+
+    this.onUsernameSubmit = this.onUsernameSubmit.bind(this);
   }
 
-  componentWillMount() {
-
-    fetch('https://chatty.kubernetes.doodle-test.com/api/chatty/v1.0/?token=yXrHuTscEfFz')
-    .then(response => response.json())
-    .then(data => {
-      const messages = data.map(({message, author, timestamp}) => {
-        return {
-          message,
-          author,
-          timestamp,
-          isCurrentAuthor: author === this.state.user
-        };
-      });
-    	this.setState({messages});
-    });
+  onUsernameSubmit(username) {
+    this.setState({username})
   }
 
   render() {
-
+    const {username} = this.state;
     return (
       <div className="chatty">
-        <MessagesFeed messages={this.state.messages} />
-        <InputPanel />
+        {!username && <UsernameInput onSubmit={this.onUsernameSubmit} />}
+        {username && <Chat username={username} />}
       </div>
     );
   }

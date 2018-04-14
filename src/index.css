@@ -14,6 +14,10 @@ body {
   background-size: 50%;
 }
 
+html, body, #root {
+  height: 100%;
+}
+
 input[type="text"] {
   font-family: "Fira Sans","Trebuchet MS","Helvetica Neue","Arial",sans-serif;
   font-size: 14px;
@@ -32,7 +36,7 @@ input[type="text"]:focus {
     outline: 0 none;
 }
 
-button {
+input[type="submit"] {
   background: #FF876D;
   color: #FFF;
   font-size: 16px;

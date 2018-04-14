@@ -1,3 +1,27 @@
 .chatty {
-  padding-bottom: 5em;
+  height: 100%;
+}
+
+.inputPanelContainer {
+  background: #3798D4;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.inputPanel {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+}
+
+.inputPanel input[type="text"] {
+  flex-grow: 1;
+  margin-right: .5em;
+}
+
+.messagesFeed {
+  padding-bottom: 100px;
 }
