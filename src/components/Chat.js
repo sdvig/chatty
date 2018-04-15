@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import queryString from 'query-string';
+import queryString from 'qs';
 import last from 'lodash/last';
 import MessagesFeed from './MessagesFeed';
 import OneFieldInput from './OneFieldInput';
